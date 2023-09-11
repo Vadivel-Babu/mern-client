@@ -1,0 +1,66 @@
+@import '../index.scss';
+
+.container{
+  max-width: 1200px;
+  margin:0 auto;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap:nowrap;
+}
+.mobile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  &:focus{
+    outline: none;
+  }
+}
+.btn{
+  &-nav{
+    background-color:$greenColor;
+    border: 0;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    color:$btntxtColor;
+    cursor: pointer;
+    &:hover{
+      background-color: $hoverGreenColor;
+      color:black;
+    }
+  }
+  &-text{
+    display: none;
+  }
+}
+
+.icon{
+  display: block;
+  &__logo{
+    font-size: 20px;
+    width: 20px;
+  }
+}
+
+@media (min-width:500px) {
+  .header{
+    flex-direction: row;
+  }
+  .icon{
+    display: none;
+  }  
+  .btn-text{
+    display: block;
+  }
+}
